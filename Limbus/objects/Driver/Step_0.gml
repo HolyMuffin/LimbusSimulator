@@ -1,0 +1,1 @@
+global.camera_x = mouse_x - 960;
