@@ -19,7 +19,9 @@ draw_sprite(SpriteUITextbox, 0, 0, 0);
 draw_set_stats(make_color_rgb(245, 210, 175), fa_left,,,FontLiberation);
 if (global.speaker == empty) {
 	draw_set_halign(fa_center);
-	draw_text_ext(960, 905, get_current_text(), 36, 1200);
+	draw_set_valign(fa_middle);
+	draw_text_ext(960, 940, get_current_text(), 36, 1200);
+	draw_set_valign(fa_top);
 } else {
 	draw_text_ext(440, 905, get_current_text(), 36, 1200);
 }

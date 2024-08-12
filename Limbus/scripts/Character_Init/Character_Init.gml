@@ -20,6 +20,6 @@ function Characters_Init() {
 		Sinclair = new Character("Sinclair", "Sinner #11", make_color_rgb(0, 0, 0), SpriteSinclair);
 		Gregor = new Character("Gregor", "Sinner #13", make_color_rgb(0, 0, 0), SpriteGregor);
 		Ryoshu = new Character("Ryoshu", "Sinner #4", make_color_rgb(0, 0, 0), SpriteRyoshu);
-		Schneewittchen = new Character("Schneewittchen", "Sinner #?", make_color_rgb(100, 150, 200), SpriteSchneewittchen); 
+		Schneewittchen = new Character("Schneewittchen", "Sinner #?", make_color_rgb(160, 215, 205), SpriteSchneewittchen); 
 	}
 }

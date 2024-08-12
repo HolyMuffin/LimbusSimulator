@@ -30,7 +30,8 @@ function New_Text_Action(text_) : Action() constructor {
 		Driver.set_text(text);
 	}
 	function action_run() {
-		if (run_counter % 2 == 0)
+		run_counter++;
+		if (run_counter % 4 == 0)
 			global.text_length_current = min(global.text_length_max, global.text_length_current + 1);
 		if (mouse_check_button_pressed(mb_left))
 			global.text_length_current = global.text_length_max;
@@ -77,7 +78,7 @@ global.test = [
 	
 	SPAWN(1500, DANTE),
 	SPEAKER(DANTE),
-	TEXT("<I thought you didn't smoke>"),
+	TEXT("<I thought you didn't smoke.>"),
 	
 	SPEAKER(SCHNEE),
 	TEXT("Well, I try not to. It's bad for your health."),
