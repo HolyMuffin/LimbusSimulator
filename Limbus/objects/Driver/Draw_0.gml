@@ -1,6 +1,6 @@
 //draw background
 if (global.background != empty)
-	draw_sprite(SpriteBG_Bus, 0, 960 + global.camera_x * 0.7, 0);
+	draw_sprite(global.background, 0, 960 + global.camera_x * 0.7, 0);
 //draw characters
 for(var i = 0; i < array_length(global.Speakers); i++) {
 	with(global.Speakers[i]) {

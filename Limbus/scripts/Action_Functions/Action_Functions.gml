@@ -13,11 +13,16 @@ function get_speaker_index(character) {
 	return empty;
 }
 
-function Dialogue_Init_Action(location_, background_) : Action() constructor {
+function Set_Location_Action(location_) : Action() constructor {
 	location = location_;
-	background = background_;
 	function action_start() {
 		global.location = location;
+	}
+}
+
+function Set_Background_Action(background_) : Action() constructor {
+	background = background_;
+	function action_start() {
 		global.background = background;
 	}
 }
@@ -52,48 +57,131 @@ function Spawn_Character_Action(x_, character_) : Action() constructor {
 	}
 }
 
+function Delete_Character_Action(character_) : Action() constructor {
+	character = character_;
+	function action_start() {
+		var index = get_speaker_index(character);
+		array_delete(global.Speakers, index, 1);
+	}
+}
+
+function Clear_All_Character_Action() : Action() constructor {
+	function action_start() {
+		global.Speakers = [];
+	}
+}
+
 function Set_Primary_Speaker_Action(character_) : Action() constructor {
 	character = character_;
 	function action_start() {
-		var speaker = global.Speakers[get_speaker_index(character)];
-		global.speaker = speaker;
-		global.camera_target_x = 960 - speaker.x;
+		if (character == empty) {
+			global.speaker = empty;
+		} else {
+			var speaker = global.Speakers[get_speaker_index(character)];
+			global.speaker = speaker;
+			global.camera_target_x = 960 - speaker.x;
+		}
 	}
 }
 
 #macro SPAWN new Spawn_Character_Action
+#macro DESPAWN new Delete_Character_Action
+#macro DESPAWN_ALL new Clear_All_Character_Action
+#macro LOCATION new Set_Location_Action
+#macro BACKGROUND new Set_Background_Action
 #macro SPEAKER new Set_Primary_Speaker_Action
 #macro TEXT new New_Text_Action
-#macro SCHNEE global.Characters.Schneewittchen
-#macro DANTE global.Characters.Dante
 
 //function Delete_Character_Action()
 Characters_Init();
 
-global.test = [
-	new Dialogue_Init_Action("Aboard Metistopheles", SpriteBG_Bus),
-	SPAWN(960, SCHNEE),
-	//SPEAKER(SCHNEE),
-	TEXT("Schneewittchen sat by the window, a lit cigarette dangling from her lips. She seemed to be looking past the night sky."),
-	
-	SPAWN(1500, DANTE),
-	SPEAKER(DANTE),
-	TEXT("<I thought you didn't smoke.>"),
-	
-	SPEAKER(SCHNEE),
-	TEXT("Well, I try not to. It's bad for your health."),
-	TEXT("I wish Gregor and Ryoshu would take better care of themselves. This kind of lifestyle makes your body break down after a while, you know?"),
-	TEXT("It's not like we can talk them out of it, either. You can't force an old habit to die. Is it essentially the same thing as letting them die a slow death?"),
+global.rollcall = [
+	LOCATION("Aboard Metistopheles"),
+	BACKGROUND(SpriteBG_Bus),
+	SPAWN(200, DANTE),
 	
 	SPEAKER(DANTE),
-	TEXT("<...>"),
+	TEXT("<Time for a roll call.>"),
+	TEXT("<Yi Sang?>"),
 	
-	SPEAKER(SCHNEE),
-	TEXT("I hope you take care of yourself too, Manager Dante."),
+	SPAWN(600, YISANG),
+	SPEAKER(YISANG),
+	TEXT("Hello."),
 	
 	SPEAKER(DANTE),
-	TEXT("<So that situation... it was all a lie as well. Why? Why did you pretend you'd never smoked before?>"),
+	TEXT("<Faust?>"),
 	
-	SPEAKER(SCHNEE),
-	TEXT("It was endearing enough to make you pity me, wasn't it?"),
+	SPAWN(700, FAUST),
+	SPEAKER(FAUST),
+	TEXT("Hello."),
+	
+	SPEAKER(DANTE),
+	TEXT("<Don Quixote?>"),
+	
+	SPAWN(800, DONQUIXOTE),
+	SPEAKER(DONQUIXOTE),
+	TEXT("Hello."),
+	
+	SPEAKER(DANTE),
+	TEXT("<Ryoshu?>"),
+	
+	SPAWN(900, RYOSHU),
+	SPEAKER(RYOSHU),
+	TEXT("Hello."),
+	
+	SPEAKER(DANTE),
+	TEXT("<Meursault?>"),
+	
+	SPAWN(1000, MEURSAULT),
+	SPEAKER(MEURSAULT),
+	TEXT("Hello."),
+	
+	SPEAKER(DANTE),
+	TEXT("<Hong lu?>"),
+	
+	SPAWN(1100, HONGLU),
+	SPEAKER(HONGLU),
+	TEXT("Hello."),
+	
+	SPEAKER(DANTE),
+	TEXT("<Heathcliff?>"),
+	
+	SPAWN(1200, HEATHCLIFF),
+	SPEAKER(HEATHCLIFF),
+	TEXT("Hello."),
+	
+	SPEAKER(DANTE),
+	TEXT("<Ishmael?>"),
+	
+	SPAWN(1300, ISHMAEL),
+	SPEAKER(ISHMAEL),
+	TEXT("Hello."),
+	
+	SPEAKER(DANTE),
+	TEXT("<Rodion?>"),
+	
+	SPAWN(1400, RODION),
+	SPEAKER(RODION),
+	TEXT("Hello."),
+	
+	SPEAKER(DANTE),
+	TEXT("<Sinclair?>"),
+	
+	SPAWN(1500, SINCLAIR),
+	SPEAKER(SINCLAIR),
+	TEXT("Hello."),
+	
+	SPEAKER(DANTE),
+	TEXT("<Outis?>"),
+	
+	SPAWN(1600, OUTIS),
+	SPEAKER(OUTIS),
+	TEXT("Hello."),
+	
+	SPEAKER(DANTE),
+	TEXT("<Gregor?>"),
+	
+	SPAWN(1700, GREGOR),
+	SPEAKER(GREGOR),
+	TEXT("Hello."),
 ]

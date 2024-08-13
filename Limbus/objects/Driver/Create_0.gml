@@ -2,7 +2,7 @@ enum EMOTION {
 	
 }
 
-global.action_queue = global.test;
+global.action_queue = global.Dialogue_Schnee_1;
 global.current_action = new Action();
 
 global.speaker = empty;
