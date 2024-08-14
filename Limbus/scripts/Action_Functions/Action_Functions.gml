@@ -27,6 +27,24 @@ function Set_Background_Action(background_) : Action() constructor {
 	}
 }
 
+function Play_Sound_Action(sound_) : Action() constructor {
+	sound = sound_;
+	function action_start() {
+		if (global.sound_effect != empty)
+			audio_stop_sound(global.sound_effect);
+		global.sound_effect = audio_play_sound(sound, 0, false);
+	}
+}
+
+function Set_BGM_Action(bgm_) : Action() constructor {
+	bgm = bgm_;
+	function action_start() {
+		if (global.bgm != empty)
+			audio_stop_sound(global.bgm);
+		global.bgm = audio_play_sound(bgm, 0, true);
+	}
+}
+
 function New_Text_Action(text_) : Action() constructor {
 	run_counter = 0;
 	complete_counter = 0;
@@ -89,8 +107,10 @@ function Set_Primary_Speaker_Action(character_) : Action() constructor {
 #macro DESPAWN_ALL new Clear_All_Character_Action
 #macro LOCATION new Set_Location_Action
 #macro BACKGROUND new Set_Background_Action
+#macro MUSIC new Set_BGM_Action
 #macro SPEAKER new Set_Primary_Speaker_Action
 #macro TEXT new New_Text_Action
+#macro SOUND new Play_Sound_Action
 
 //function Delete_Character_Action()
 Characters_Init();
@@ -98,10 +118,13 @@ Characters_Init();
 global.rollcall = [
 	LOCATION("Aboard Metistopheles"),
 	BACKGROUND(SpriteBG_BusBrown),
+	MUSIC(PortInShadow),
 	SPAWN(200, DANTE),
 	
 	SPEAKER(DANTE),
+	SOUND(SoundDanteNormal),
 	TEXT("<Time for a roll call.>"),
+	SOUND(SoundDanteShort),
 	TEXT("<Yi Sang?>"),
 	
 	SPAWN(600, YISANG),
@@ -109,6 +132,7 @@ global.rollcall = [
 	TEXT("Hello."),
 	
 	SPEAKER(DANTE),
+	SOUND(SoundDanteShort),
 	TEXT("<Faust?>"),
 	
 	SPAWN(700, FAUST),
@@ -116,6 +140,7 @@ global.rollcall = [
 	TEXT("Hello."),
 	
 	SPEAKER(DANTE),
+	SOUND(SoundDanteShort),
 	TEXT("<Don Quixote?>"),
 	
 	SPAWN(800, DONQUIXOTE),
@@ -123,7 +148,7 @@ global.rollcall = [
 	TEXT("Hello."),
 	
 	SPEAKER(DANTE),
-	TEXT("<Ryoshu?>"),
+	TEXT("<Ryōshū?>"),
 	
 	SPAWN(900, RYOSHU),
 	SPEAKER(RYOSHU),
@@ -137,7 +162,7 @@ global.rollcall = [
 	TEXT("Hello."),
 	
 	SPEAKER(DANTE),
-	TEXT("<Hong lu?>"),
+	TEXT("<Hong Lu?>"),
 	
 	SPAWN(1100, HONGLU),
 	SPEAKER(HONGLU),

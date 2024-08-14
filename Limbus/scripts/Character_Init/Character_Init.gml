@@ -35,7 +35,7 @@ function Characters_Init() {
 		Yisang = new Character("Yi Sang", "Sinner #1", make_color_rgb(210, 225, 230), SpriteYisang);
 		Faust = new Character("Faust", "Sinner #2", make_color_rgb(255, 170, 165), SpriteFaust);
 		DonQuixote = new Character("Don Quixote", "Sinner #3", make_color_rgb(255, 230, 30), SpriteDonQuixote);
-		Ryoshu = new Character("Ryoshu", "Sinner #4", make_color_rgb(175, 0, 0), SpriteRyoshu);
+		Ryoshu = new Character("Ryōshū", "Sinner #4", make_color_rgb(175, 0, 0), SpriteRyoshu);
 		Meursault = new Character("Meursault", "Sinner #5", make_color_rgb(20, 40, 110), SpriteMeursault);
 		Honglu = new Character("Hong Lu", "Sinner #6", make_color_rgb(80, 255, 215), SpriteHonglu);
 		Heathcliff = new Character("Heathcliff", "Sinner #7", make_color_rgb(75, 40, 95), SpriteHeathcliff);

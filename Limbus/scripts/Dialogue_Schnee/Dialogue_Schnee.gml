@@ -10,9 +10,9 @@ global.Dialogue_Schnee_1 = [
 	TEXT("H-huh? Thank you..."),
 	
 	SPEAKER(empty),
-	TEXT("I watched a she took a cigarette from Ryoshu's box, her hands trembling. I was surprised by Ryoshu's unexpected gesture of kindness, as I never imagined she would be the one to offer comfort to, well, anyone."),
+	TEXT("I watched a she took a cigarette from Ryōshū's box, her hands trembling. I was surprised by Ryōshū's unexpected gesture of kindness, as I never imagined she would be the one to offer comfort to, well, anyone."),
 	TEXT("But even I couldn't help feeling sorry for her. Her face showed the effort she was making to hold back tears. It was difficult not to reach out and offer some reassurance."),
-	TEXT("Ryoshu lit the cigarette that was already clumsily placed between Schneewittchen's lips. Hesistantly, she took a huff and then..."),
+	TEXT("Ryōshū lit the cigarette that was already clumsily placed between Schneewittchen's lips. Hesistantly, she took a huff and then..."),
 	
 	SPEAKER(SCHNEE),
 	TEXT("HACK- cough, COUGH! Wheeze... HAck! gag-"),
@@ -59,7 +59,7 @@ global.Dialogue_Schnee_2 = [
 	
 	SPEAKER(SCHNEE),
 	TEXT("Well, I try not to. It's bad for your health."),
-	TEXT("I wish Gregor and Ryoshu would take better care of themselves. This kind of lifestyle makes your body break down after a while, you know?"),
+	TEXT("I wish Gregor and Ryōshū would take better care of themselves. This kind of lifestyle makes your body break down after a while, you know?"),
 	TEXT("It's not like we can talk them out of it, either. You can't force an old habit to die. Is it essentially the same thing as letting them die a slow death?"),
 	
 	SPEAKER(DANTE),

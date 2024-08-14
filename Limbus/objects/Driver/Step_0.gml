@@ -1,6 +1,6 @@
 var run_action = true;
-if (abs(global.camera_target_x - global.camera_x) > 10)
-	global.camera_x = lerp(global.camera_x, global.camera_target_x, 0.05);
+if (abs(global.camera_target_x - global.camera_x) > 8)
+	global.camera_x = lerp(global.camera_x, global.camera_target_x, 0.1);
 if (global.background != empty && sprite_get_width(global.background) == 1920)
 	global.camera_x = 0;
 

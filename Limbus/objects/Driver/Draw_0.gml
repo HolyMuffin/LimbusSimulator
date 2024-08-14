@@ -1,5 +1,6 @@
 if (global.shader_on)
 	shader_set(TCorpShader);
+
 //draw background
 if (global.background != empty)
 	draw_sprite(global.background, 0, 960 + global.camera_x * 0.7, 0);
