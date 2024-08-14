@@ -1,0 +1,1 @@
+global.shader_on = !global.shader_on;

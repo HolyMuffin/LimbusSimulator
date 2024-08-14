@@ -1,3 +1,5 @@
+if (global.shader_on)
+	shader_set(TCorpShader);
 //draw background
 if (global.background != empty)
 	draw_sprite(global.background, 0, 960 + global.camera_x * 0.7, 0);
@@ -10,6 +12,7 @@ for(var i = 0; i < array_length(global.Speakers); i++) {
 		draw_sprite_ext(character.picture, 0, x + global.camera_x, y, 0.75, 0.75, 0, blend, 1);
 	}
 }
+shader_reset();
 
 //draw vignette
 draw_sprite(SpriteUIVignette, 0, 0, 0);

@@ -97,7 +97,7 @@ Characters_Init();
 
 global.rollcall = [
 	LOCATION("Aboard Metistopheles"),
-	BACKGROUND(SpriteBG_Bus),
+	BACKGROUND(SpriteBG_BusBrown),
 	SPAWN(200, DANTE),
 	
 	SPEAKER(DANTE),

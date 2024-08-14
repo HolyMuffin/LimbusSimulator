@@ -1,8 +1,9 @@
 enum EMOTION {
 	
 }
+global.shader_on = true;
 
-global.action_queue = global.Dialogue_Schnee_1;
+global.action_queue = global.rollcall;
 global.current_action = new Action();
 
 global.speaker = empty;
