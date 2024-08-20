@@ -27,6 +27,16 @@ function Set_Background_Action(background_) : Action() constructor {
 	}
 }
 
+function Adjust_Background_Action(x_ = global.background_offset_target[0], y_ = global.background_offset_target[1], zoom_ = global.background_zoom_target) : Action() constructor {
+	x = x_;
+	y = y_;
+	zoom = zoom_;
+	function action_start() {
+		global.background_offset_target = [x, y];
+		global.background_zoom_target = zoom;
+	}
+}
+
 function Play_Sound_Action(sound_) : Action() constructor {
 	sound = sound_;
 	function action_start() {
@@ -51,6 +61,7 @@ function New_Text_Action(text_) : Action() constructor {
 	text = text_;
 	function action_start() {
 		Driver.set_text(text);
+		audio_play_sound(SoundPageTurn, 0, false);
 	}
 	function action_run() {
 		run_counter++;
@@ -107,6 +118,7 @@ function Set_Primary_Speaker_Action(character_) : Action() constructor {
 #macro DESPAWN_ALL new Clear_All_Character_Action
 #macro LOCATION new Set_Location_Action
 #macro BACKGROUND new Set_Background_Action
+#macro BACKGROUND_STATS new Adjust_Background_Action
 #macro MUSIC new Set_BGM_Action
 #macro SPEAKER new Set_Primary_Speaker_Action
 #macro TEXT new New_Text_Action
@@ -117,8 +129,15 @@ Characters_Init();
 
 global.rollcall = [
 	LOCATION("Aboard Metistopheles"),
-	BACKGROUND(SpriteBG_BusBrown),
-	MUSIC(PortInShadow),
+	//BACKGROUND(SpriteBG_BusBrown),
+	BACKGROUND(SpriteCG_Test),
+	TEXT("Testing CG as background"),
+	BACKGROUND_STATS(-100, -50, 2),
+	TEXT("Testing adjusting the CG in background"),
+	BACKGROUND_STATS(400, 200, 1.5),
+	TEXT("Testing a different spot of the background"),
+	BACKGROUND_STATS(0, 0, 1),
+	//MUSIC(PortInShadow),
 	SPAWN(200, DANTE),
 	
 	SPEAKER(DANTE),

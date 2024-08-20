@@ -3,7 +3,7 @@ if (global.shader_on)
 
 //draw background
 if (global.background != empty)
-	draw_sprite(global.background, 0, 960 + global.camera_x * 0.7, 0);
+	draw_sprite_ext(global.background, 0, 960 - global.background_offset[0] + global.camera_x * 0.7, 540 - global.background_offset[1], global.background_zoom, global.background_zoom, 0, c_white, 1);
 //draw characters
 for(var i = 0; i < array_length(global.Speakers); i++) {
 	with(global.Speakers[i]) {

@@ -23,7 +23,7 @@
   ],
   "name":"SpriteBG_Bus",
   "nineSlice":null,
-  "origin":1,
+  "origin":4,
   "parent":{
     "name":"Backgrounds",
     "path":"folders/Sprites/Backgrounds.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":1813,
-    "yorigin":0,
+    "yorigin":540,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

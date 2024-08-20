@@ -11,6 +11,10 @@ global.bgm = empty;
 global.sound_effect = empty;
 global.location = empty;
 global.background = empty;
+global.background_offset = [0, 0];
+global.background_offset_target = [0, 0];
+global.background_zoom = 1;
+global.background_zoom_target = 1;
 global.camera_x = 0;
 global.camera_target_x = 0;
 

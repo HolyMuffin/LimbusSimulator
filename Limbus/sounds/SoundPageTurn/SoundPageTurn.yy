@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"PositiveSail",
+  "%Name":"SoundPageTurn",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":87.27273,
-  "name":"PositiveSail",
+  "duration":0.235102,
+  "name":"SoundPageTurn",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"PositiveSail.wav",
+  "soundFile":"SoundPageTurn.mp3",
   "type":0,
-  "volume":0.4,
+  "volume":1.0,
 }
