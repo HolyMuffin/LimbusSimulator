@@ -1,3 +1,5 @@
+
+
 var run_action = true;
 if (abs(global.camera_target_x - global.camera_x) > 8)
 	global.camera_x = lerp(global.camera_x, global.camera_target_x, 0.1);

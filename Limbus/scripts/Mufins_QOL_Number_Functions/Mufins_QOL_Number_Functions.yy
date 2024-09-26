@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"Mufins_QOL_Number_Functions",
   "isCompatibility":false,
   "isDnD":false,

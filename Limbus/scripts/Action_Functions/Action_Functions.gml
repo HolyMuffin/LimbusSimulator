@@ -82,6 +82,7 @@ function Spawn_Character_Action(x_, character_) : Action() constructor {
 	x = x_;
 	character = character_;
 	function action_start() {
+		character.picture_head = empty;
 		array_push(global.Speakers, new Speaker(x, character));
 	}
 }
@@ -113,6 +114,14 @@ function Set_Primary_Speaker_Action(character_) : Action() constructor {
 	}
 }
 
+function Change_Head_Action(character_, new_head_sprite_): Action() constructor {
+	character = character_;
+	new_head_sprite = new_head_sprite_;
+	function action_start() {
+		character.picture_head = new_head_sprite;
+	}
+}
+
 #macro SPAWN new Spawn_Character_Action
 #macro DESPAWN new Delete_Character_Action
 #macro DESPAWN_ALL new Clear_All_Character_Action
@@ -121,6 +130,7 @@ function Set_Primary_Speaker_Action(character_) : Action() constructor {
 #macro BACKGROUND_STATS new Adjust_Background_Action
 #macro MUSIC new Set_BGM_Action
 #macro SPEAKER new Set_Primary_Speaker_Action
+#macro CHANGE_HEAD new Change_Head_Action
 #macro TEXT new New_Text_Action
 #macro SOUND new Play_Sound_Action
 
@@ -129,14 +139,7 @@ Characters_Init();
 
 global.rollcall = [
 	LOCATION("Aboard Metistopheles"),
-	//BACKGROUND(SpriteBG_BusBrown),
-	BACKGROUND(SpriteCG_Test),
-	TEXT("Testing CG as background"),
-	BACKGROUND_STATS(-100, -50, 2),
-	TEXT("Testing adjusting the CG in background"),
-	BACKGROUND_STATS(400, 200, 1.5),
-	TEXT("Testing a different spot of the background"),
-	BACKGROUND_STATS(0, 0, 1),
+	BACKGROUND(SpriteBG_BusBrown),
 	//MUSIC(PortInShadow),
 	SPAWN(200, DANTE),
 	

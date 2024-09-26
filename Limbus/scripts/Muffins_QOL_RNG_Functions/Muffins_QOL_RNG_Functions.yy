@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"Muffins_QOL_RNG_Functions",
   "isCompatibility":false,
   "isDnD":false,

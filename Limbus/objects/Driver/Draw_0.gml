@@ -1,6 +1,5 @@
 if (global.shader_on)
 	shader_set(TCorpShader);
-
 //draw background
 if (global.background != empty)
 	draw_sprite_ext(global.background, 0, 960 - global.background_offset[0] + global.camera_x * 0.7, 540 - global.background_offset[1], global.background_zoom, global.background_zoom, 0, c_white, 1);
@@ -11,6 +10,8 @@ for(var i = 0; i < array_length(global.Speakers); i++) {
 		if (global.speaker == self)
 			blend = c_white;
 		draw_sprite_ext(character.picture, 0, x + global.camera_x, y, 0.75, 0.75, 0, blend, 1);
+		if (character.picture_head != empty)
+			draw_sprite_ext(character.picture_head, 0, x + character.head_coords[0] + global.offset_x + global.camera_x, global.offset_y + y + character.head_coords[1], 0.75, 0.75, 0, blend, 1);
 	}
 }
 shader_reset();

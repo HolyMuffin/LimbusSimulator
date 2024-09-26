@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"Character_Init",
   "isCompatibility":false,
   "isDnD":false,

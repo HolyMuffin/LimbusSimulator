@@ -1,9 +1,9 @@
 enum EMOTION {
 	
 }
-global.shader_on = true;
+global.shader_on = false;
 
-global.action_queue = global.rollcall;
+global.action_queue = global.Head_Aligner;
 global.current_action = new Action();
 
 global.speaker = empty;
@@ -17,6 +17,9 @@ global.background_zoom = 1;
 global.background_zoom_target = 1;
 global.camera_x = 0;
 global.camera_target_x = 0;
+
+global.offset_x = 0;
+global.offset_y = 0;
 
 function set_text(text) {
 	global.text = text;
