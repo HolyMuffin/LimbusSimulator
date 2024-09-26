@@ -49,6 +49,7 @@
     {"id":{"name":"Action_Functions","path":"scripts/Action_Functions/Action_Functions.yy",},},
     {"id":{"name":"Character_Init","path":"scripts/Character_Init/Character_Init.yy",},},
     {"id":{"name":"Dialogue_Schnee","path":"scripts/Dialogue_Schnee/Dialogue_Schnee.yy",},},
+    {"id":{"name":"Dialogue_Tutorial","path":"scripts/Dialogue_Tutorial/Dialogue_Tutorial.yy",},},
     {"id":{"name":"Muffins_QOL_Array_Functions","path":"scripts/Muffins_QOL_Array_Functions/Muffins_QOL_Array_Functions.yy",},},
     {"id":{"name":"Muffins_QOL_Functions","path":"scripts/Muffins_QOL_Functions/Muffins_QOL_Functions.yy",},},
     {"id":{"name":"Muffins_QOL_RNG_Functions","path":"scripts/Muffins_QOL_RNG_Functions/Muffins_QOL_RNG_Functions.yy",},},

@@ -3,7 +3,7 @@ enum EMOTION {
 }
 global.shader_on = false;
 
-global.action_queue = global.Head_Aligner;
+global.action_queue = global.Example_Dialogue;
 global.current_action = new Action();
 
 global.speaker = empty;

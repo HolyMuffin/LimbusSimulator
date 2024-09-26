@@ -1,0 +1,16 @@
+global.Example_Dialogue = [
+	BACKGROUND(SpriteBG_Bus),
+	MUSIC(PortInShadow),
+	SPAWN(500, DANTE),
+	TEXT("This text has no speaker because a speaker has not been set yet"),
+	SPEAKER(DANTE),
+	TEXT("Now that a speaker is set, the camera pans to Dante and highlights him"),
+	SPAWN(800, FAUST),
+	TEXT("Faust has appeared. But since the speaker has not been adjusted, Dante is still the speaker"),
+	SPEAKER(FAUST),
+	TEXT("Now Faust is the speaker"),
+	DESPAWN_ALL(),
+	TEXT("Now everyone has been despawned. But Faust is still speaker"),
+	SPEAKER(empty),
+	TEXT("To switch back to no speaker, write SPEAKER(empty). Do mind that this is case sensitive"),
+];

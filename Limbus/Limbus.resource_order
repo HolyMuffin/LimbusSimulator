@@ -26,6 +26,7 @@
     {"name":"FontTitle","order":1,"path":"fonts/FontTitle/FontTitle.yy",},
     {"name":"Action_Functions","order":2,"path":"scripts/Action_Functions/Action_Functions.yy",},
     {"name":"Dialogue_Schnee","order":3,"path":"scripts/Dialogue_Schnee/Dialogue_Schnee.yy",},
+    {"name":"Dialogue_Tutorial","order":4,"path":"scripts/Dialogue_Tutorial/Dialogue_Tutorial.yy",},
     {"name":"Muffins_QOL_Array_Functions","order":1,"path":"scripts/Muffins_QOL_Array_Functions/Muffins_QOL_Array_Functions.yy",},
     {"name":"Muffins_QOL_Functions","order":2,"path":"scripts/Muffins_QOL_Functions/Muffins_QOL_Functions.yy",},
     {"name":"Muffins_QOL_RNG_Functions","order":3,"path":"scripts/Muffins_QOL_RNG_Functions/Muffins_QOL_RNG_Functions.yy",},
